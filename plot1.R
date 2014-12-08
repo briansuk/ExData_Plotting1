@@ -1,0 +1,3 @@
+globalactivepower <- as.character(household_power_consumption$Global_active_power[as.Date(household_power_consumption$Date, "%d/%m/%Y") >= as.Date("2007-02-01", "%Y-%m-%d") & as.Date(household_power_consumption$Date, "%d/%m/%Y") <= as.Date("2007-02-02", "%Y-%m-%d")])
+globalactivepower <- as.numeric(globalactivepower)
+hist(globalactivepower, xlab = "Global Active Power (kilowatts)", main = "Global Active Power", col = "Red")
